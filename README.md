@@ -4,6 +4,9 @@
 
 # cython-extensions-sc2
 
+This has been modified to produce python 3.11 releases
+
+
 [API Documentation](https://aressc2.github.io/cython-extensions-sc2/) - for a full list of included functions.
 
 `cython-extensions-sc2` is a library designed for the [python-sc2](https://github.com/BurnySc2/python-sc2) API. 
