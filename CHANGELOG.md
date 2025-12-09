@@ -1,302 +1,288 @@
 # CHANGELOG
 
 
-## v0.11.1 (2025-12-09)
+## v0.1.0 (2025-12-09)
 
 ### Bug Fixes
 
-- Dynamically allocate and release memory
-  ([`a5bbf25`](https://github.com/AresSC2/cython-extensions-sc2/commit/a5bbf2554f80fee0ff91d10fed64401870ade274))
+- Access correct units object in BotAI
+  ([`e5db481`](https://github.com/craigham/cython-extensions-sc2/commit/e5db4812ee385cbca5ba8a699483cfbc9c948850))
 
+- Add imports required for ladder
+  ([`e425929`](https://github.com/craigham/cython-extensions-sc2/commit/e4259290b3e54a4f0f3e43f5c5dd982d199dc5e1))
 
-## v0.11.0 (2025-11-22)
-
-### Refactoring
-
-- Fix wrappers.py that got broke while dealing with conflicts
-  ([`22d094d`](https://github.com/AresSC2/cython-extensions-sc2/commit/22d094d8bfe748ddf950bca9eafaf3dc179c44f3))
-
-
-## v0.10.0 (2025-11-20)
-
-### Code Style
-
-- Auto formatters
-  ([`421b827`](https://github.com/AresSC2/cython-extensions-sc2/commit/421b827fa3e33772d918fd926d36c5cbe22bce8e))
-
-- Auto formatters
-  ([`bb183b4`](https://github.com/AresSC2/cython-extensions-sc2/commit/bb183b4c30fe340b0471eba3965bcb38af3d406a))
-
-### Features
-
-- Add `skip_creep_check` parameter to placement functions
-  ([`8c9db5f`](https://github.com/AresSC2/cython-extensions-sc2/commit/8c9db5fdef8d80cd1406b5dd2518ee67ac66b72a))
-
-- Allows bypassing creep checks for structures like hatcheries or nydus canals.
-
-- Add new cython function closer/further than
-  ([`cdd0840`](https://github.com/AresSC2/cython-extensions-sc2/commit/cdd0840f3ad19ec252ef7343174f33411656fbd7))
-
-### Testing
-
-- Add unit tests for cython utility functions in `tests/test_units_utils.py`
-  ([`8ff9574`](https://github.com/AresSC2/cython-extensions-sc2/commit/8ff9574fc4ad856a4054894640b1a7a64f00aaa5))
-
-
-## v0.9.0 (2025-11-07)
-
-### Bug Fixes
+- Add license-files field to setuptools to prevent invalid metadata
+  ([`4e923be`](https://github.com/craigham/cython-extensions-sc2/commit/4e923be634b1d72d6f0f31435f98df0bc4b15820))
 
 - Always return at least one point
-  ([`cc7d895`](https://github.com/AresSC2/cython-extensions-sc2/commit/cc7d89577bba681448c02e2fa0f9f7737a316b8c))
+  ([`cc7d895`](https://github.com/craigham/cython-extensions-sc2/commit/cc7d89577bba681448c02e2fa0f9f7737a316b8c))
 
-### Continuous Integration
+- Build wheel earlier to fix dir structure of released wheel
+  ([`abd82dd`](https://github.com/craigham/cython-extensions-sc2/commit/abd82dd4fa4265816ba61dffe790359c22bf1629))
 
-- Set `fetch-depth: 0` in test workflow
-  ([`a3ff25c`](https://github.com/AresSC2/cython-extensions-sc2/commit/a3ff25c2d9104e4f385ac4fae9879ca105ded088))
+- Build wheels for numerous architecture / os
+  ([`defc93a`](https://github.com/craigham/cython-extensions-sc2/commit/defc93a8630bbeaf77f44c74708a5100168f2646))
 
-### Features
+- Bump cibuildwheel to v3.2.0 in GitHub Actions workflow
+  ([`9f42ff4`](https://github.com/craigham/cython-extensions-sc2/commit/9f42ff4adff2838f1edc6e05c12586688aad749e))
 
-- Search for valid starting point on path lookup
-  ([`eb30e25`](https://github.com/AresSC2/cython-extensions-sc2/commit/eb30e25ab8ac08fb133ce42655636feaeabd2758))
+- Call correct units collection
+  ([`3e609f0`](https://github.com/craigham/cython-extensions-sc2/commit/3e609f019fc78148c426eab2a7983e75cd95bdf2))
 
-### Testing
+- Consolidate and upgrade dependencies in GitHub Actions workflows for wheel builds and release
+  ([`74e73a8`](https://github.com/craigham/cython-extensions-sc2/commit/74e73a827769596105d28c2657d32ee01dd6e200))
 
-- Add test for dijkstra start point search
-  ([`a5276a5`](https://github.com/AresSC2/cython-extensions-sc2/commit/a5276a59c31be05b324d00ff8beb73ccfcc81516))
+- Correct dtype for bounds in find_aoe
+  ([#26](https://github.com/craigham/cython-extensions-sc2/pull/26),
+  [`1038e76`](https://github.com/craigham/cython-extensions-sc2/commit/1038e76143d551fd6a15767e2111c34bc96da2c1))
 
+- Correct imports
+  ([`3912ed1`](https://github.com/craigham/cython-extensions-sc2/commit/3912ed156ff7ea65601bf0536208d307ea05d1cc))
 
-## v0.8.12 (2025-10-09)
+- Correct version number for cibuildwheel
+  ([`6395630`](https://github.com/craigham/cython-extensions-sc2/commit/63956305a33e5f3978760f64f0095b7c6cfa959d))
 
+- Drop python 3.10 support for macos wheels
+  ([`a254dd6`](https://github.com/craigham/cython-extensions-sc2/commit/a254dd6c3aeaa9fe9c566110f4a1d6048e7088f9))
 
-## v0.8.11 (2025-10-07)
+- Dynamically allocate and release memory
+  ([`a5bbf25`](https://github.com/craigham/cython-extensions-sc2/commit/a5bbf2554f80fee0ff91d10fed64401870ade274))
 
-### Bug Fixes
+- Fake fix commit to trigger new release
+  ([`9d41c34`](https://github.com/craigham/cython-extensions-sc2/commit/9d41c3432232cafd787d78073c115c821764c0c7))
+
+- Handle missing trained from value for archon
+  ([`8883bc8`](https://github.com/craigham/cython-extensions-sc2/commit/8883bc8c1c6749a4ed60e3b2b63c5dc907a6f292))
+
+- Include LICENSE file in setuptools configuration
+  ([`bb9dbec`](https://github.com/craigham/cython-extensions-sc2/commit/bb9dbecef24756660504c6559fcc9c75f9981454))
+
+- Install pip and numpy dependencies before building wheels in GitHub Actions
+  ([`7a11713`](https://github.com/craigham/cython-extensions-sc2/commit/7a11713b42f304a37da56894689afff272ae70c6))
+
+- Optimization func works with writable and read only np arrays
+  ([`68b36c7`](https://github.com/craigham/cython-extensions-sc2/commit/68b36c7b95f2b59253301dd62f5113cd4f7b090e))
 
 - Pin poetry to version 1.8.4 in GitHub Actions workflows
-  ([`ea6c191`](https://github.com/AresSC2/cython-extensions-sc2/commit/ea6c1912b2a6b2a0e010b25c2e7847824d71a4be))
+  ([`ea6c191`](https://github.com/craigham/cython-extensions-sc2/commit/ea6c1912b2a6b2a0e010b25c2e7847824d71a4be))
 
-### Performance Improvements
+- Pipi workflow
+  ([`57dbb6b`](https://github.com/craigham/cython-extensions-sc2/commit/57dbb6bffe89592834427e4569e824bab47e2efb))
 
-- Remove type checking for numbers in position
-  ([`f8cbb5f`](https://github.com/AresSC2/cython-extensions-sc2/commit/f8cbb5f734043bef475a34d00c07dfbfbb80fc0c))
+- Prevent cy_center returning unexpected values
+  ([`d8e8d14`](https://github.com/craigham/cython-extensions-sc2/commit/d8e8d142bab3cfee22467b616f18b6a10f8b0662))
 
-This was having a slightly worse performance impact than expected
+- Prevent division by 0
+  ([`070105f`](https://github.com/craigham/cython-extensions-sc2/commit/070105fcd2278a9f62ab34ebd5d6a5a22b2d9163))
 
+- Prevent lurkermp crash
+  ([`09a1d97`](https://github.com/craigham/cython-extensions-sc2/commit/09a1d972dc9155dd5e4e1025d0194e64b24645a7))
 
-## v0.8.10 (2025-10-06)
+- Remove redundant license-files field from setuptools configuration
+  ([`1b7618a`](https://github.com/craigham/cython-extensions-sc2/commit/1b7618a1cabee0141c20ca64bff5e4d34a2c4cdb))
 
-### Bug Fixes
+- Remove unused cython functions
+  ([`b4f9aa0`](https://github.com/craigham/cython-extensions-sc2/commit/b4f9aa061aecf1bbf535aea3a9bc06770fb640a3))
+
+- Replace distutils with setuptools in build script
+  ([`be34dee`](https://github.com/craigham/cython-extensions-sc2/commit/be34dee6c78e5cbbb0ba5fb02daa2487610c756f))
+
+- Replace numpy.math INFINITY with libc.math INFINITY in general_utils.pyx
+  ([`bc0ca09`](https://github.com/craigham/cython-extensions-sc2/commit/bc0ca09f9fb6732af1b64ef962a37a9c5c015b17))
+
+- Semantic-release/exec@v1
+  ([`92d39be`](https://github.com/craigham/cython-extensions-sc2/commit/92d39bea03175c9e045423a942294756b3d5ccd7))
+
+- Simplify target position access so it works with list of units
+  ([`c40f1cb`](https://github.com/craigham/cython-extensions-sc2/commit/c40f1cb3e9bc9e81a6ebe213647bc7ad5fdd694f))
+
+- Typo
+  ([`8dd9e96`](https://github.com/craigham/cython-extensions-sc2/commit/8dd9e96d9fb69efdef3018b494e86b5d8fb36a03))
+
+- Update default value for turn_rate in get_turn_rate function
+  ([`1c91282`](https://github.com/craigham/cython-extensions-sc2/commit/1c9128298995779ee8445696a1a7510b50316b44))
+
+Prevents function returning `None`
 
 - Update GitHub Actions workflows for wheel builds
-  ([`3d99541`](https://github.com/AresSC2/cython-extensions-sc2/commit/3d99541a6f0c9d13697daf6cd13cee2b025004b5))
+  ([`3d99541`](https://github.com/craigham/cython-extensions-sc2/commit/3d99541a6f0c9d13697daf6cd13cee2b025004b5))
 
 - Limit `cibw_archs` to `x86_64` only due to issues with other architectures. - Switch to
   `--no-build-isolation` in `CIBW_BUILD_FRONTEND`. - Pin `poetry` to version `1.8.4` in build
   dependencies.
 
-
-## v0.8.9 (2025-10-02)
-
-### Bug Fixes
-
-- Replace numpy.math INFINITY with libc.math INFINITY in general_utils.pyx
-  ([`bc0ca09`](https://github.com/AresSC2/cython-extensions-sc2/commit/bc0ca09f9fb6732af1b64ef962a37a9c5c015b17))
-
-
-## v0.8.8 (2025-10-02)
-
-### Bug Fixes
-
-- Consolidate and upgrade dependencies in GitHub Actions workflows for wheel builds and release
-  ([`74e73a8`](https://github.com/AresSC2/cython-extensions-sc2/commit/74e73a827769596105d28c2657d32ee01dd6e200))
-
-
-## v0.8.7 (2025-10-02)
-
-### Bug Fixes
-
-- Install pip and numpy dependencies before building wheels in GitHub Actions
-  ([`7a11713`](https://github.com/AresSC2/cython-extensions-sc2/commit/7a11713b42f304a37da56894689afff272ae70c6))
-
-
-## v0.8.6 (2025-10-02)
-
-### Bug Fixes
-
-- Bump cibuildwheel to v3.2.0 in GitHub Actions workflow
-  ([`9f42ff4`](https://github.com/AresSC2/cython-extensions-sc2/commit/9f42ff4adff2838f1edc6e05c12586688aad749e))
-
-
-## v0.8.5 (2025-10-02)
-
-### Bug Fixes
-
-- Remove redundant license-files field from setuptools configuration
-  ([`1b7618a`](https://github.com/AresSC2/cython-extensions-sc2/commit/1b7618a1cabee0141c20ca64bff5e4d34a2c4cdb))
-
-
-## v0.8.4 (2025-10-02)
-
-### Bug Fixes
-
-- Include LICENSE file in setuptools configuration
-  ([`bb9dbec`](https://github.com/AresSC2/cython-extensions-sc2/commit/bb9dbecef24756660504c6559fcc9c75f9981454))
-
-
-## v0.8.3 (2025-10-02)
-
-
-## v0.8.2 (2025-10-01)
-
-### Bug Fixes
-
-- Add license-files field to setuptools to prevent invalid metadata
-  ([`4e923be`](https://github.com/AresSC2/cython-extensions-sc2/commit/4e923be634b1d72d6f0f31435f98df0bc4b15820))
-
-
-## v0.8.1 (2025-10-01)
-
-### Bug Fixes
-
-- Replace distutils with setuptools in build script
-  ([`be34dee`](https://github.com/AresSC2/cython-extensions-sc2/commit/be34dee6c78e5cbbb0ba5fb02daa2487610c756f))
-
 - Update pyproject.toml to include license and additional package files
-  ([`9307026`](https://github.com/AresSC2/cython-extensions-sc2/commit/930702639c4af3384a37527e716510b584ab048c))
-
-
-## v0.8.0 (2025-10-01)
-
-### Bug Fixes
-
-- Simplify target position access so it works with list of units
-  ([`c40f1cb`](https://github.com/AresSC2/cython-extensions-sc2/commit/c40f1cb3e9bc9e81a6ebe213647bc7ad5fdd694f))
-
-### Documentation
-
-- Add type safety usage guide and contributing details to README.md
-  ([`2487b74`](https://github.com/AresSC2/cython-extensions-sc2/commit/2487b74453966e71e6a52edd6d16d7e584348622))
-
-### Features
-
-- New type checking system using python wrappers
-  ([`ea12c8b`](https://github.com/AresSC2/cython-extensions-sc2/commit/ea12c8b128c5c0af1a9d88b04b7d134d905ce012))
-
-
-## v0.7.1 (2025-09-04)
-
-### Bug Fixes
-
-- Drop python 3.10 support for macos wheels
-  ([`a254dd6`](https://github.com/AresSC2/cython-extensions-sc2/commit/a254dd6c3aeaa9fe9c566110f4a1d6048e7088f9))
-
-
-## v0.7.0 (2025-09-04)
-
-### Bug Fixes
+  ([`9307026`](https://github.com/craigham/cython-extensions-sc2/commit/930702639c4af3384a37527e716510b584ab048c))
 
 - Update references to cy_in_pathing_grid with cy_in_pathing_grid_burny
-  ([`df7d2f4`](https://github.com/AresSC2/cython-extensions-sc2/commit/df7d2f4f6c3b3c25fd5ce00f934cbb240baf91aa))
+  ([`df7d2f4`](https://github.com/craigham/cython-extensions-sc2/commit/df7d2f4f6c3b3c25fd5ce00f934cbb240baf91aa))
+
+- Use correct cibuildwheel version
+  ([`51a8d35`](https://github.com/craigham/cython-extensions-sc2/commit/51a8d35849fc7e6aef7ad709f21df4378a5074e4))
+
+- Wheels build on mac
+  ([`7a11cf3`](https://github.com/craigham/cython-extensions-sc2/commit/7a11cf3f3e1d9b7c64c16f7c4c42018138daa2c7))
+
+- Wheels build on python 3.13
+  ([`17fa3fe`](https://github.com/craigham/cython-extensions-sc2/commit/17fa3fe299f91ce432494b4fc6ce520180778e86))
+
+- **unit_data**: Add 'flying' attribute to ChangelingZealot unit
+  ([`666ead9`](https://github.com/craigham/cython-extensions-sc2/commit/666ead93eb8d0bf721ef3c14272c6d462ca06adf))
+
+- **units_utils**: Fix incorrect variable reference in units loop
+  ([`09686df`](https://github.com/craigham/cython-extensions-sc2/commit/09686dfc712a21d86db5b0e750ca9df3c8793ffd))
 
 ### Build System
 
 - Drop python 3.10 support
-  ([`0e6f6dc`](https://github.com/AresSC2/cython-extensions-sc2/commit/0e6f6dc5c989e9f864dba0ae8d055ae206e74260))
+  ([`0e6f6dc`](https://github.com/craigham/cython-extensions-sc2/commit/0e6f6dc5c989e9f864dba0ae8d055ae206e74260))
+
+- Install burnysc2 7.0.0 so unittests dont break
+  ([`d135997`](https://github.com/craigham/cython-extensions-sc2/commit/d1359979d00ab30822a3a9e4cfdcb1b6b87ca453))
+
+- Remove extra compile args
+  ([`f15bedf`](https://github.com/craigham/cython-extensions-sc2/commit/f15bedf3b0e7242c050d96a219293a7d36339cbc))
+
+- Update python semantic release
+  ([`c985ec7`](https://github.com/craigham/cython-extensions-sc2/commit/c985ec7aac08c2003403664a60f4617c149aecdc))
+
+- Updated cython build pipeline
+  ([`ee4eb52`](https://github.com/craigham/cython-extensions-sc2/commit/ee4eb525a1ee4ecd456fa854e6b6707df3a87839))
+
+### Chores
+
+- Add dependencies
+  ([`9fedc82`](https://github.com/craigham/cython-extensions-sc2/commit/9fedc82ddfc073772f94295b26bca4b2bce25a6e))
+
+- Add sementic release library
+  ([`1e463b7`](https://github.com/craigham/cython-extensions-sc2/commit/1e463b74e89956740e23acbb6402c38b3f15f059))
+
+- Downgrade semantic release version
+  ([`df2f4ba`](https://github.com/craigham/cython-extensions-sc2/commit/df2f4ba5204c2ba39b96ce9ddee4c52d999c3252))
+
+- Organise project dependencies
+  ([`84eb9ec`](https://github.com/craigham/cython-extensions-sc2/commit/84eb9ec076a23b5c08426c8854fac9a6d3815a1b))
+
+### Code Style
+
+- Auto formatters
+  ([`421b827`](https://github.com/craigham/cython-extensions-sc2/commit/421b827fa3e33772d918fd926d36c5cbe22bce8e))
+
+- Auto formatters
+  ([`bb183b4`](https://github.com/craigham/cython-extensions-sc2/commit/bb183b4c30fe340b0471eba3965bcb38af3d406a))
+
+- Auto formatting
+  ([`f9d1f75`](https://github.com/craigham/cython-extensions-sc2/commit/f9d1f7540e1cca7c7edbf167e1e57fe25d0b5dbf))
+
+### Continuous Integration
+
+- Actually install correct python version
+  ([`7db1291`](https://github.com/craigham/cython-extensions-sc2/commit/7db1291f96f93d5499b8da61ec4d2ad598810155))
+
+- Attempt to ensure pipi has accurate version number
+  ([`c85fa24`](https://github.com/craigham/cython-extensions-sc2/commit/c85fa249f032318c6734ceeb1ba975c9573c7ebf))
+
+- Auto deploy docs
+  ([`daa2523`](https://github.com/craigham/cython-extensions-sc2/commit/daa252336acc251d3b563f72448c02919c2dd700))
+
+- Auto release github workflow
+  ([`3472d9c`](https://github.com/craigham/cython-extensions-sc2/commit/3472d9c284853ac11c3842745ee8acd5f432cb2e))
+
+- Automated compile pipeline for multiple os
+  ([`a62786e`](https://github.com/craigham/cython-extensions-sc2/commit/a62786e95ae98536c4a1a5cf142e64034d19563a))
+
+- Change method of installing poetry on windows
+  ([`d49a853`](https://github.com/craigham/cython-extensions-sc2/commit/d49a853dd03e6f5df9de465f14c6a725b084672b))
+
+- Fix semantic release config
+  ([`f12c694`](https://github.com/craigham/cython-extensions-sc2/commit/f12c694bd3aeb0e915f0b87c616d2585ca772685))
+
+- Install specific poetry version
+  ([`23eee4f`](https://github.com/craigham/cython-extensions-sc2/commit/23eee4f69475a49362198c4b8329b5d5ad706044))
+
+- Reorder workflow logic
+  ([`67aa826`](https://github.com/craigham/cython-extensions-sc2/commit/67aa826908cbe85a202b660bea391df2f97b0fb5))
+
+- Revert to basic wheel building for windows
+  ([`c11bb90`](https://github.com/craigham/cython-extensions-sc2/commit/c11bb90c42c08ef1fcc2439343cfe87e3815a8bb))
+
+- Revert to previous release workflow
+  ([`4e77e6d`](https://github.com/craigham/cython-extensions-sc2/commit/4e77e6d76a4eabed012511c8f4dc5c14a9370fc7))
+
+- Set `fetch-depth: 0` in test workflow
+  ([`a3ff25c`](https://github.com/craigham/cython-extensions-sc2/commit/a3ff25c2d9104e4f385ac4fae9879ca105ded088))
+
+- Support python3.9
+  ([`d852096`](https://github.com/craigham/cython-extensions-sc2/commit/d8520968f478bc67742ec958f7c398271a9690c8))
+
+- Trigger workflow
+  ([`a1fce49`](https://github.com/craigham/cython-extensions-sc2/commit/a1fce49ef7df13365d353f5f0e46365403c76405))
+
+- Update release.yml
+  ([`bdd821a`](https://github.com/craigham/cython-extensions-sc2/commit/bdd821ac17331b90cbc078eb10b9544502de3258))
+
+- Update release.yml
+  ([`f597ee1`](https://github.com/craigham/cython-extensions-sc2/commit/f597ee1e639452939d3f91bac5b17a552eb0f178))
+
+- Update release.yml
+  ([`cba53ef`](https://github.com/craigham/cython-extensions-sc2/commit/cba53ef49fe2ad9f1a97ff17efef17c3abe92cd0))
+
+- Update release.yml
+  ([`2d91190`](https://github.com/craigham/cython-extensions-sc2/commit/2d91190b00562ca450c648e4c4ad800a8fe6d088))
+
+- Update release.yml
+  ([`3715367`](https://github.com/craigham/cython-extensions-sc2/commit/3715367ba939112d89ff7092c4a18b8807dbc73e))
+
+- Update release.yml
+  ([`6462d1f`](https://github.com/craigham/cython-extensions-sc2/commit/6462d1f83d0e678f57300c8a09081acead3d2dc5))
+
+- Update release.yml
+  ([`8b3d670`](https://github.com/craigham/cython-extensions-sc2/commit/8b3d670bef00316ea103f10f426fd0b0c791300e))
+
+- Update release.yml
+  ([`9cec805`](https://github.com/craigham/cython-extensions-sc2/commit/9cec80534abafda5bf0549ab9686e0a9ed091a25))
+
+- Update release.yml
+  ([`eb8a56c`](https://github.com/craigham/cython-extensions-sc2/commit/eb8a56c7791cc22d7fc1820bed337ba2d8151f86))
+
+- Update release.yml
+  ([`d1ce6c3`](https://github.com/craigham/cython-extensions-sc2/commit/d1ce6c346c9b6ef76fbca98b4b405546274d4999))
+
+- Updated semantic release config
+  ([`9b7f1d7`](https://github.com/craigham/cython-extensions-sc2/commit/9b7f1d7859d05e4ab39774188ec9a347633e3634))
 
 ### Documentation
 
+- Add stubs/pyi files for all cython functions
+  ([`edd9a6f`](https://github.com/craigham/cython-extensions-sc2/commit/edd9a6f14a7994806a6d6eaf082acbc436dc2d93))
+
+- Add type safety usage guide and contributing details to README.md
+  ([`2487b74`](https://github.com/craigham/cython-extensions-sc2/commit/2487b74453966e71e6a52edd6d16d7e584348622))
+
+- Initial docs setup
+  ([`36a1411`](https://github.com/craigham/cython-extensions-sc2/commit/36a14119ea47f5434cda6e5c39a7d2de4a90fcb2))
+
+- Tidy up docstrings / customize mkdocs
+  ([`e451f8b`](https://github.com/craigham/cython-extensions-sc2/commit/e451f8b8cfefbea9ab37b8e083bd93c69dcc4d57))
+
+- Update docs so autodocs still works
+  ([`d4ecad1`](https://github.com/craigham/cython-extensions-sc2/commit/d4ecad1f7ab5408b6ca2aaf03cf61b6e85f78913))
+
+- Update readme
+  ([`fea801a`](https://github.com/craigham/cython-extensions-sc2/commit/fea801a9dfea97dc1ae6923a1b1d2cd4f95848f8))
+
 - Update README.md
-  ([`604253a`](https://github.com/AresSC2/cython-extensions-sc2/commit/604253a0f2a7aca10af73e98023b89c4c01d23a2))
+  ([`604253a`](https://github.com/craigham/cython-extensions-sc2/commit/604253a0f2a7aca10af73e98023b89c4c01d23a2))
 
 ### Features
 
-- Add has creep and in pathing grid functions
-  ([`039af98`](https://github.com/AresSC2/cython-extensions-sc2/commit/039af983956f98bc95bdfabe7421e714739fc415))
+- Add `skip_creep_check` parameter to placement functions
+  ([`8c9db5f`](https://github.com/craigham/cython-extensions-sc2/commit/8c9db5fdef8d80cd1406b5dd2518ee67ac66b72a))
 
-- Support float position types in cy_point_below_value function
-  ([`bd82346`](https://github.com/AresSC2/cython-extensions-sc2/commit/bd82346e9ccc49d0c9889fcf1227935b56c957e8))
+- Allows bypassing creep checks for structures like hatcheries or nydus canals.
 
-By performing rounding inside the cython function, we get a bit more performance for real world
-  scenarios
-
-- Updated notebooks
-  ([`f87a4d4`](https://github.com/AresSC2/cython-extensions-sc2/commit/f87a4d43a08acf78856d5db005ac829aa3599568))
-
-
-## v0.6.8 (2025-05-26)
-
-### Bug Fixes
-
-- Optimization func works with writable and read only np arrays
-  ([`68b36c7`](https://github.com/AresSC2/cython-extensions-sc2/commit/68b36c7b95f2b59253301dd62f5113cd4f7b090e))
-
-
-## v0.6.7 (2025-05-13)
-
-### Bug Fixes
-
-- Update default value for turn_rate in get_turn_rate function
-  ([`1c91282`](https://github.com/AresSC2/cython-extensions-sc2/commit/1c9128298995779ee8445696a1a7510b50316b44))
-
-Prevents function returning `None`
-
-
-## v0.6.6 (2025-05-08)
-
-### Bug Fixes
-
-- **unit_data**: Add 'flying' attribute to ChangelingZealot unit
-  ([`666ead9`](https://github.com/AresSC2/cython-extensions-sc2/commit/666ead93eb8d0bf721ef3c14272c6d462ca06adf))
-
-
-## v0.6.5 (2025-05-07)
-
-### Bug Fixes
-
-- **units_utils**: Fix incorrect variable reference in units loop
-  ([`09686df`](https://github.com/AresSC2/cython-extensions-sc2/commit/09686dfc712a21d86db5b0e750ca9df3c8793ffd))
-
-
-## v0.6.4 (2025-04-27)
-
-### Bug Fixes
-
-- Correct dtype for bounds in find_aoe
-  ([#26](https://github.com/AresSC2/cython-extensions-sc2/pull/26),
-  [`1038e76`](https://github.com/AresSC2/cython-extensions-sc2/commit/1038e76143d551fd6a15767e2111c34bc96da2c1))
-
-
-## v0.6.3 (2025-04-25)
-
-### Bug Fixes
-
-- Wheels build on mac
-  ([`7a11cf3`](https://github.com/AresSC2/cython-extensions-sc2/commit/7a11cf3f3e1d9b7c64c16f7c4c42018138daa2c7))
-
-
-## v0.6.2 (2025-04-25)
-
-### Bug Fixes
-
-- Correct version number for cibuildwheel
-  ([`6395630`](https://github.com/AresSC2/cython-extensions-sc2/commit/63956305a33e5f3978760f64f0095b7c6cfa959d))
-
-
-## v0.6.1 (2025-04-25)
-
-### Bug Fixes
-
-- Wheels build on python 3.13
-  ([`17fa3fe`](https://github.com/AresSC2/cython-extensions-sc2/commit/17fa3fe299f91ce432494b4fc6ce520180778e86))
-
-
-## v0.6.0 (2025-04-06)
-
-### Features
-
-- Add dijkstra pathing ([#21](https://github.com/AresSC2/cython-extensions-sc2/pull/21),
-  [`39a8318`](https://github.com/AresSC2/cython-extensions-sc2/commit/39a83184f35eb97e06813881896d181734b44166))
+- Add dijkstra pathing ([#21](https://github.com/craigham/cython-extensions-sc2/pull/21),
+  [`39a8318`](https://github.com/craigham/cython-extensions-sc2/commit/39a83184f35eb97e06813881896d181734b44166))
 
 * feat: add dijkstra pathing
 
@@ -356,325 +342,84 @@ This reverts commit 1b60b47a3af721dbcaae5a717270829f0acac6e6.
 
 Co-authored-by: Volker Schmidt <volker.schmidt91@gmail.com>
 
+- Add has creep and in pathing grid functions
+  ([`039af98`](https://github.com/craigham/cython-extensions-sc2/commit/039af983956f98bc95bdfabe7421e714739fc415))
 
-## v0.5.0 (2025-01-03)
+- Add new cython function closer/further than
+  ([`cdd0840`](https://github.com/craigham/cython-extensions-sc2/commit/cdd0840f3ad19ec252ef7343174f33411656fbd7))
 
-### Build System
+- Add unit data and turn data dicts
+  ([`7656c0f`](https://github.com/craigham/cython-extensions-sc2/commit/7656c0f13247245d0cb18dcd5f8818cf991487c1))
 
-- Install burnysc2 7.0.0 so unittests dont break
-  ([`d135997`](https://github.com/AresSC2/cython-extensions-sc2/commit/d1359979d00ab30822a3a9e4cfdcb1b6b87ca453))
-
-- Remove extra compile args
-  ([`f15bedf`](https://github.com/AresSC2/cython-extensions-sc2/commit/f15bedf3b0e7242c050d96a219293a7d36339cbc))
-
-- Update python semantic release
-  ([`c985ec7`](https://github.com/AresSC2/cython-extensions-sc2/commit/c985ec7aac08c2003403664a60f4617c149aecdc))
-
-### Continuous Integration
-
-- Attempt to ensure pipi has accurate version number
-  ([`c85fa24`](https://github.com/AresSC2/cython-extensions-sc2/commit/c85fa249f032318c6734ceeb1ba975c9573c7ebf))
-
-- Update release.yml
-  ([`bdd821a`](https://github.com/AresSC2/cython-extensions-sc2/commit/bdd821ac17331b90cbc078eb10b9544502de3258))
-
-- Update release.yml
-  ([`f597ee1`](https://github.com/AresSC2/cython-extensions-sc2/commit/f597ee1e639452939d3f91bac5b17a552eb0f178))
-
-- Update release.yml
-  ([`cba53ef`](https://github.com/AresSC2/cython-extensions-sc2/commit/cba53ef49fe2ad9f1a97ff17efef17c3abe92cd0))
-
-- Update release.yml
-  ([`2d91190`](https://github.com/AresSC2/cython-extensions-sc2/commit/2d91190b00562ca450c648e4c4ad800a8fe6d088))
-
-- Update release.yml
-  ([`3715367`](https://github.com/AresSC2/cython-extensions-sc2/commit/3715367ba939112d89ff7092c4a18b8807dbc73e))
-
-- Update release.yml
-  ([`6462d1f`](https://github.com/AresSC2/cython-extensions-sc2/commit/6462d1f83d0e678f57300c8a09081acead3d2dc5))
-
-- Update release.yml
-  ([`8b3d670`](https://github.com/AresSC2/cython-extensions-sc2/commit/8b3d670bef00316ea103f10f426fd0b0c791300e))
-
-- Update release.yml
-  ([`9cec805`](https://github.com/AresSC2/cython-extensions-sc2/commit/9cec80534abafda5bf0549ab9686e0a9ed091a25))
-
-- Update release.yml
-  ([`eb8a56c`](https://github.com/AresSC2/cython-extensions-sc2/commit/eb8a56c7791cc22d7fc1820bed337ba2d8151f86))
-
-- Update release.yml
-  ([`d1ce6c3`](https://github.com/AresSC2/cython-extensions-sc2/commit/d1ce6c346c9b6ef76fbca98b4b405546274d4999))
-
-- Updated semantic release config
-  ([`9b7f1d7`](https://github.com/AresSC2/cython-extensions-sc2/commit/9b7f1d7859d05e4ab39774188ec9a347633e3634))
-
-### Documentation
-
-- Update docs so autodocs still works
-  ([`d4ecad1`](https://github.com/AresSC2/cython-extensions-sc2/commit/d4ecad1f7ab5408b6ca2aaf03cf61b6e85f78913))
-
-### Features
-
-- Implement moving formation and AOE functions
-  ([`5048349`](https://github.com/AresSC2/cython-extensions-sc2/commit/50483495ac3a056eab9ee77bb43a2747404cf9ee))
-
-- Notebook with new aoe and formation functions
-  ([`2050c4b`](https://github.com/AresSC2/cython-extensions-sc2/commit/2050c4bbf126904ae2b5afad29451e6aeef836f2))
-
-- Update workflow to 3.12
-  ([`38e8304`](https://github.com/AresSC2/cython-extensions-sc2/commit/38e830450fd0ccb8acf0bfae564014d83a9eec22))
-
-
-## v0.4.6 (2024-11-19)
-
-### Bug Fixes
-
-- Prevent cy_center returning unexpected values
-  ([`d8e8d14`](https://github.com/AresSC2/cython-extensions-sc2/commit/d8e8d142bab3cfee22467b616f18b6a10f8b0662))
-
-
-## v0.4.5 (2024-10-03)
-
-### Bug Fixes
-
-- Prevent division by 0
-  ([`070105f`](https://github.com/AresSC2/cython-extensions-sc2/commit/070105fcd2278a9f62ab34ebd5d6a5a22b2d9163))
-
-
-## v0.4.4 (2024-06-19)
-
-### Bug Fixes
-
-- Handle missing trained from value for archon
-  ([`8883bc8`](https://github.com/AresSC2/cython-extensions-sc2/commit/8883bc8c1c6749a4ed60e3b2b63c5dc907a6f292))
-
-
-## v0.4.3 (2024-03-19)
-
-### Bug Fixes
-
-- Prevent lurkermp crash
-  ([`09a1d97`](https://github.com/AresSC2/cython-extensions-sc2/commit/09a1d972dc9155dd5e4e1025d0194e64b24645a7))
-
-
-## v0.4.2 (2024-03-19)
-
-### Bug Fixes
-
-- Call correct units collection
-  ([`3e609f0`](https://github.com/AresSC2/cython-extensions-sc2/commit/3e609f019fc78148c426eab2a7983e75cd95bdf2))
-
-
-## v0.4.1 (2024-03-19)
-
-### Bug Fixes
-
-- Access correct units object in BotAI
-  ([`e5db481`](https://github.com/AresSC2/cython-extensions-sc2/commit/e5db4812ee385cbca5ba8a699483cfbc9c948850))
-
-
-## v0.4.0 (2024-03-14)
-
-### Features
+Removes a dependency on ares
 
 - Add units center mass function
-  ([`88d88e6`](https://github.com/AresSC2/cython-extensions-sc2/commit/88d88e6606f80d52448279183573b3b8566cacaf))
-
-
-## v0.3.6 (2024-02-18)
-
-### Bug Fixes
-
-- Build wheels for numerous architecture / os
-  ([`defc93a`](https://github.com/AresSC2/cython-extensions-sc2/commit/defc93a8630bbeaf77f44c74708a5100168f2646))
-
-- Use correct cibuildwheel version
-  ([`51a8d35`](https://github.com/AresSC2/cython-extensions-sc2/commit/51a8d35849fc7e6aef7ad709f21df4378a5074e4))
-
-### Continuous Integration
-
-- Actually install correct python version
-  ([`7db1291`](https://github.com/AresSC2/cython-extensions-sc2/commit/7db1291f96f93d5499b8da61ec4d2ad598810155))
-
-- Change method of installing poetry on windows
-  ([`d49a853`](https://github.com/AresSC2/cython-extensions-sc2/commit/d49a853dd03e6f5df9de465f14c6a725b084672b))
-
-- Install specific poetry version
-  ([`23eee4f`](https://github.com/AresSC2/cython-extensions-sc2/commit/23eee4f69475a49362198c4b8329b5d5ad706044))
-
-- Reorder workflow logic
-  ([`67aa826`](https://github.com/AresSC2/cython-extensions-sc2/commit/67aa826908cbe85a202b660bea391df2f97b0fb5))
-
-- Revert to basic wheel building for windows
-  ([`c11bb90`](https://github.com/AresSC2/cython-extensions-sc2/commit/c11bb90c42c08ef1fcc2439343cfe87e3815a8bb))
-
-- Support python3.9
-  ([`d852096`](https://github.com/AresSC2/cython-extensions-sc2/commit/d8520968f478bc67742ec958f7c398271a9690c8))
-
-
-## v0.3.5 (2024-02-09)
-
-### Bug Fixes
-
-- Add imports required for ladder
-  ([`e425929`](https://github.com/AresSC2/cython-extensions-sc2/commit/e4259290b3e54a4f0f3e43f5c5dd982d199dc5e1))
-
-
-## v0.3.4 (2024-02-08)
-
-### Bug Fixes
-
-- Correct imports
-  ([`3912ed1`](https://github.com/AresSC2/cython-extensions-sc2/commit/3912ed156ff7ea65601bf0536208d307ea05d1cc))
-
-- Fake fix commit to trigger new release
-  ([`9d41c34`](https://github.com/AresSC2/cython-extensions-sc2/commit/9d41c3432232cafd787d78073c115c821764c0c7))
-
-### Documentation
-
-- Add stubs/pyi files for all cython functions
-  ([`edd9a6f`](https://github.com/AresSC2/cython-extensions-sc2/commit/edd9a6f14a7994806a6d6eaf082acbc436dc2d93))
-
-- Tidy up docstrings / customize mkdocs
-  ([`e451f8b`](https://github.com/AresSC2/cython-extensions-sc2/commit/e451f8b8cfefbea9ab37b8e083bd93c69dcc4d57))
-
-
-## v0.3.3 (2024-02-07)
-
-### Bug Fixes
-
-- Build wheel earlier to fix dir structure of released wheel
-  ([`abd82dd`](https://github.com/AresSC2/cython-extensions-sc2/commit/abd82dd4fa4265816ba61dffe790359c22bf1629))
-
-
-## v0.3.2 (2024-02-07)
-
-### Bug Fixes
-
-- Typo
-  ([`8dd9e96`](https://github.com/AresSC2/cython-extensions-sc2/commit/8dd9e96d9fb69efdef3018b494e86b5d8fb36a03))
-
-
-## v0.3.1 (2024-02-07)
-
-### Bug Fixes
-
-- Pipi workflow
-  ([`57dbb6b`](https://github.com/AresSC2/cython-extensions-sc2/commit/57dbb6bffe89592834427e4569e824bab47e2efb))
-
-
-## v0.3.0 (2024-02-06)
-
-### Features
+  ([`88d88e6`](https://github.com/craigham/cython-extensions-sc2/commit/88d88e6606f80d52448279183573b3b8566cacaf))
 
 - Ci workflow to pipi
-  ([`c6c27c6`](https://github.com/AresSC2/cython-extensions-sc2/commit/c6c27c63cab827e71e1c028321de29145b89c0e5))
+  ([`c6c27c6`](https://github.com/craigham/cython-extensions-sc2/commit/c6c27c63cab827e71e1c028321de29145b89c0e5))
 
+- Implement moving formation and AOE functions
+  ([`5048349`](https://github.com/craigham/cython-extensions-sc2/commit/50483495ac3a056eab9ee77bb43a2747404cf9ee))
 
-## v0.2.1 (2024-02-04)
+- Inital cython files and compile process
+  ([`a98c722`](https://github.com/craigham/cython-extensions-sc2/commit/a98c722df9f36a377bba9f6a94c10d31fa5d8d8c))
 
-### Bug Fixes
+- New type checking system using python wrappers
+  ([`ea12c8b`](https://github.com/craigham/cython-extensions-sc2/commit/ea12c8b128c5c0af1a9d88b04b7d134d905ce012))
 
-- Remove unused cython functions
-  ([`b4f9aa0`](https://github.com/AresSC2/cython-extensions-sc2/commit/b4f9aa061aecf1bbf535aea3a9bc06770fb640a3))
+- Notebook with new aoe and formation functions
+  ([`2050c4b`](https://github.com/craigham/cython-extensions-sc2/commit/2050c4bbf126904ae2b5afad29451e6aeef836f2))
 
-### Code Style
+- Reorganise code and user friendly import
+  ([`281588d`](https://github.com/craigham/cython-extensions-sc2/commit/281588de572dfee0c3f51a771053ac210108993d))
 
-- Auto formatting
-  ([`f9d1f75`](https://github.com/AresSC2/cython-extensions-sc2/commit/f9d1f7540e1cca7c7edbf167e1e57fe25d0b5dbf))
+- Search for valid starting point on path lookup
+  ([`eb30e25`](https://github.com/craigham/cython-extensions-sc2/commit/eb30e25ab8ac08fb133ce42655636feaeabd2758))
 
-### Documentation
+- Support float position types in cy_point_below_value function
+  ([`bd82346`](https://github.com/craigham/cython-extensions-sc2/commit/bd82346e9ccc49d0c9889fcf1227935b56c957e8))
 
-- Update readme
-  ([`fea801a`](https://github.com/AresSC2/cython-extensions-sc2/commit/fea801a9dfea97dc1ae6923a1b1d2cd4f95848f8))
+By performing rounding inside the cython function, we get a bit more performance for real world
+  scenarios
+
+- Test new release pipeline
+  ([`8900ab5`](https://github.com/craigham/cython-extensions-sc2/commit/8900ab53e89fb996ca4e34238e40c5abb955f17b))
+
+- Update workflow to 3.12
+  ([`38e8304`](https://github.com/craigham/cython-extensions-sc2/commit/38e830450fd0ccb8acf0bfae564014d83a9eec22))
+
+- Updated notebooks
+  ([`f87a4d4`](https://github.com/craigham/cython-extensions-sc2/commit/f87a4d43a08acf78856d5db005ac829aa3599568))
+
+- Updated notebooks to work with burnysc2
+  ([`d85d24d`](https://github.com/craigham/cython-extensions-sc2/commit/d85d24d07bea11fea8b599b2f51005b9f1881404))
+
+### Performance Improvements
+
+- Remove type checking for numbers in position
+  ([`f8cbb5f`](https://github.com/craigham/cython-extensions-sc2/commit/f8cbb5f734043bef475a34d00c07dfbfbb80fc0c))
+
+This was having a slightly worse performance impact than expected
+
+### Refactoring
+
+- Fix wrappers.py that got broke while dealing with conflicts
+  ([`22d094d`](https://github.com/craigham/cython-extensions-sc2/commit/22d094d8bfe748ddf950bca9eafaf3dc179c44f3))
 
 ### Testing
 
 - Add more tests
-  ([`7fcdb2d`](https://github.com/AresSC2/cython-extensions-sc2/commit/7fcdb2d057a8bc9422b8cd9ccff509f18027d7ff))
-
-
-## v0.2.0 (2024-02-03)
-
-### Bug Fixes
-
-- Semantic-release/exec@v1
-  ([`92d39be`](https://github.com/AresSC2/cython-extensions-sc2/commit/92d39bea03175c9e045423a942294756b3d5ccd7))
-
-### Continuous Integration
-
-- Revert to previous release workflow
-  ([`4e77e6d`](https://github.com/AresSC2/cython-extensions-sc2/commit/4e77e6d76a4eabed012511c8f4dc5c14a9370fc7))
-
-### Features
-
-- Test new release pipeline
-  ([`8900ab5`](https://github.com/AresSC2/cython-extensions-sc2/commit/8900ab53e89fb996ca4e34238e40c5abb955f17b))
-
-
-## v0.1.0 (2024-02-02)
-
-### Build System
-
-- Updated cython build pipeline
-  ([`ee4eb52`](https://github.com/AresSC2/cython-extensions-sc2/commit/ee4eb525a1ee4ecd456fa854e6b6707df3a87839))
-
-### Chores
-
-- Add dependencies
-  ([`9fedc82`](https://github.com/AresSC2/cython-extensions-sc2/commit/9fedc82ddfc073772f94295b26bca4b2bce25a6e))
-
-- Add sementic release library
-  ([`1e463b7`](https://github.com/AresSC2/cython-extensions-sc2/commit/1e463b74e89956740e23acbb6402c38b3f15f059))
-
-- Downgrade semantic release version
-  ([`df2f4ba`](https://github.com/AresSC2/cython-extensions-sc2/commit/df2f4ba5204c2ba39b96ce9ddee4c52d999c3252))
-
-- Organise project dependencies
-  ([`84eb9ec`](https://github.com/AresSC2/cython-extensions-sc2/commit/84eb9ec076a23b5c08426c8854fac9a6d3815a1b))
-
-### Continuous Integration
-
-- Auto deploy docs
-  ([`daa2523`](https://github.com/AresSC2/cython-extensions-sc2/commit/daa252336acc251d3b563f72448c02919c2dd700))
-
-- Auto release github workflow
-  ([`3472d9c`](https://github.com/AresSC2/cython-extensions-sc2/commit/3472d9c284853ac11c3842745ee8acd5f432cb2e))
-
-- Automated compile pipeline for multiple os
-  ([`a62786e`](https://github.com/AresSC2/cython-extensions-sc2/commit/a62786e95ae98536c4a1a5cf142e64034d19563a))
-
-- Fix semantic release config
-  ([`f12c694`](https://github.com/AresSC2/cython-extensions-sc2/commit/f12c694bd3aeb0e915f0b87c616d2585ca772685))
-
-- Trigger workflow
-  ([`a1fce49`](https://github.com/AresSC2/cython-extensions-sc2/commit/a1fce49ef7df13365d353f5f0e46365403c76405))
-
-### Documentation
-
-- Initial docs setup
-  ([`36a1411`](https://github.com/AresSC2/cython-extensions-sc2/commit/36a14119ea47f5434cda6e5c39a7d2de4a90fcb2))
-
-### Features
-
-- Add unit data and turn data dicts
-  ([`7656c0f`](https://github.com/AresSC2/cython-extensions-sc2/commit/7656c0f13247245d0cb18dcd5f8818cf991487c1))
-
-Removes a dependency on ares
-
-- Inital cython files and compile process
-  ([`a98c722`](https://github.com/AresSC2/cython-extensions-sc2/commit/a98c722df9f36a377bba9f6a94c10d31fa5d8d8c))
-
-- Reorganise code and user friendly import
-  ([`281588d`](https://github.com/AresSC2/cython-extensions-sc2/commit/281588de572dfee0c3f51a771053ac210108993d))
-
-- Updated notebooks to work with burnysc2
-  ([`d85d24d`](https://github.com/AresSC2/cython-extensions-sc2/commit/d85d24d07bea11fea8b599b2f51005b9f1881404))
-
-### Testing
+  ([`7fcdb2d`](https://github.com/craigham/cython-extensions-sc2/commit/7fcdb2d057a8bc9422b8cd9ccff509f18027d7ff))
 
 - Add pickled data and load bot from pickle function
-  ([`5af13a1`](https://github.com/AresSC2/cython-extensions-sc2/commit/5af13a11c5f55c3cf3ec0b30eae14dd8eb08269d))
+  ([`5af13a1`](https://github.com/craigham/cython-extensions-sc2/commit/5af13a11c5f55c3cf3ec0b30eae14dd8eb08269d))
+
+- Add test for dijkstra start point search
+  ([`a5276a5`](https://github.com/craigham/cython-extensions-sc2/commit/a5276a59c31be05b324d00ff8beb73ccfcc81516))
 
 - Add unit test setup and github workflow
-  ([`368faaa`](https://github.com/AresSC2/cython-extensions-sc2/commit/368faaa358793366f72a13f39186be8d682f3e83))
+  ([`368faaa`](https://github.com/craigham/cython-extensions-sc2/commit/368faaa358793366f72a13f39186be8d682f3e83))
+
+- Add unit tests for cython utility functions in `tests/test_units_utils.py`
+  ([`8ff9574`](https://github.com/craigham/cython-extensions-sc2/commit/8ff9574fc4ad856a4054894640b1a7a64f00aaa5))
