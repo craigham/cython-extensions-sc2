@@ -1,6 +1,362 @@
 # CHANGELOG
 
 
+## v0.11.1 (2025-12-09)
+
+### Bug Fixes
+
+- Dynamically allocate and release memory
+  ([`a5bbf25`](https://github.com/AresSC2/cython-extensions-sc2/commit/a5bbf2554f80fee0ff91d10fed64401870ade274))
+
+
+## v0.11.0 (2025-11-22)
+
+### Refactoring
+
+- Fix wrappers.py that got broke while dealing with conflicts
+  ([`22d094d`](https://github.com/AresSC2/cython-extensions-sc2/commit/22d094d8bfe748ddf950bca9eafaf3dc179c44f3))
+
+
+## v0.10.0 (2025-11-20)
+
+### Code Style
+
+- Auto formatters
+  ([`421b827`](https://github.com/AresSC2/cython-extensions-sc2/commit/421b827fa3e33772d918fd926d36c5cbe22bce8e))
+
+- Auto formatters
+  ([`bb183b4`](https://github.com/AresSC2/cython-extensions-sc2/commit/bb183b4c30fe340b0471eba3965bcb38af3d406a))
+
+### Features
+
+- Add `skip_creep_check` parameter to placement functions
+  ([`8c9db5f`](https://github.com/AresSC2/cython-extensions-sc2/commit/8c9db5fdef8d80cd1406b5dd2518ee67ac66b72a))
+
+- Allows bypassing creep checks for structures like hatcheries or nydus canals.
+
+- Add new cython function closer/further than
+  ([`cdd0840`](https://github.com/AresSC2/cython-extensions-sc2/commit/cdd0840f3ad19ec252ef7343174f33411656fbd7))
+
+### Testing
+
+- Add unit tests for cython utility functions in `tests/test_units_utils.py`
+  ([`8ff9574`](https://github.com/AresSC2/cython-extensions-sc2/commit/8ff9574fc4ad856a4054894640b1a7a64f00aaa5))
+
+
+## v0.9.0 (2025-11-07)
+
+### Bug Fixes
+
+- Always return at least one point
+  ([`cc7d895`](https://github.com/AresSC2/cython-extensions-sc2/commit/cc7d89577bba681448c02e2fa0f9f7737a316b8c))
+
+### Continuous Integration
+
+- Set `fetch-depth: 0` in test workflow
+  ([`a3ff25c`](https://github.com/AresSC2/cython-extensions-sc2/commit/a3ff25c2d9104e4f385ac4fae9879ca105ded088))
+
+### Features
+
+- Search for valid starting point on path lookup
+  ([`eb30e25`](https://github.com/AresSC2/cython-extensions-sc2/commit/eb30e25ab8ac08fb133ce42655636feaeabd2758))
+
+### Testing
+
+- Add test for dijkstra start point search
+  ([`a5276a5`](https://github.com/AresSC2/cython-extensions-sc2/commit/a5276a59c31be05b324d00ff8beb73ccfcc81516))
+
+
+## v0.8.12 (2025-10-09)
+
+
+## v0.8.11 (2025-10-07)
+
+### Bug Fixes
+
+- Pin poetry to version 1.8.4 in GitHub Actions workflows
+  ([`ea6c191`](https://github.com/AresSC2/cython-extensions-sc2/commit/ea6c1912b2a6b2a0e010b25c2e7847824d71a4be))
+
+### Performance Improvements
+
+- Remove type checking for numbers in position
+  ([`f8cbb5f`](https://github.com/AresSC2/cython-extensions-sc2/commit/f8cbb5f734043bef475a34d00c07dfbfbb80fc0c))
+
+This was having a slightly worse performance impact than expected
+
+
+## v0.8.10 (2025-10-06)
+
+### Bug Fixes
+
+- Update GitHub Actions workflows for wheel builds
+  ([`3d99541`](https://github.com/AresSC2/cython-extensions-sc2/commit/3d99541a6f0c9d13697daf6cd13cee2b025004b5))
+
+- Limit `cibw_archs` to `x86_64` only due to issues with other architectures. - Switch to
+  `--no-build-isolation` in `CIBW_BUILD_FRONTEND`. - Pin `poetry` to version `1.8.4` in build
+  dependencies.
+
+
+## v0.8.9 (2025-10-02)
+
+### Bug Fixes
+
+- Replace numpy.math INFINITY with libc.math INFINITY in general_utils.pyx
+  ([`bc0ca09`](https://github.com/AresSC2/cython-extensions-sc2/commit/bc0ca09f9fb6732af1b64ef962a37a9c5c015b17))
+
+
+## v0.8.8 (2025-10-02)
+
+### Bug Fixes
+
+- Consolidate and upgrade dependencies in GitHub Actions workflows for wheel builds and release
+  ([`74e73a8`](https://github.com/AresSC2/cython-extensions-sc2/commit/74e73a827769596105d28c2657d32ee01dd6e200))
+
+
+## v0.8.7 (2025-10-02)
+
+### Bug Fixes
+
+- Install pip and numpy dependencies before building wheels in GitHub Actions
+  ([`7a11713`](https://github.com/AresSC2/cython-extensions-sc2/commit/7a11713b42f304a37da56894689afff272ae70c6))
+
+
+## v0.8.6 (2025-10-02)
+
+### Bug Fixes
+
+- Bump cibuildwheel to v3.2.0 in GitHub Actions workflow
+  ([`9f42ff4`](https://github.com/AresSC2/cython-extensions-sc2/commit/9f42ff4adff2838f1edc6e05c12586688aad749e))
+
+
+## v0.8.5 (2025-10-02)
+
+### Bug Fixes
+
+- Remove redundant license-files field from setuptools configuration
+  ([`1b7618a`](https://github.com/AresSC2/cython-extensions-sc2/commit/1b7618a1cabee0141c20ca64bff5e4d34a2c4cdb))
+
+
+## v0.8.4 (2025-10-02)
+
+### Bug Fixes
+
+- Include LICENSE file in setuptools configuration
+  ([`bb9dbec`](https://github.com/AresSC2/cython-extensions-sc2/commit/bb9dbecef24756660504c6559fcc9c75f9981454))
+
+
+## v0.8.3 (2025-10-02)
+
+
+## v0.8.2 (2025-10-01)
+
+### Bug Fixes
+
+- Add license-files field to setuptools to prevent invalid metadata
+  ([`4e923be`](https://github.com/AresSC2/cython-extensions-sc2/commit/4e923be634b1d72d6f0f31435f98df0bc4b15820))
+
+
+## v0.8.1 (2025-10-01)
+
+### Bug Fixes
+
+- Replace distutils with setuptools in build script
+  ([`be34dee`](https://github.com/AresSC2/cython-extensions-sc2/commit/be34dee6c78e5cbbb0ba5fb02daa2487610c756f))
+
+- Update pyproject.toml to include license and additional package files
+  ([`9307026`](https://github.com/AresSC2/cython-extensions-sc2/commit/930702639c4af3384a37527e716510b584ab048c))
+
+
+## v0.8.0 (2025-10-01)
+
+### Bug Fixes
+
+- Simplify target position access so it works with list of units
+  ([`c40f1cb`](https://github.com/AresSC2/cython-extensions-sc2/commit/c40f1cb3e9bc9e81a6ebe213647bc7ad5fdd694f))
+
+### Documentation
+
+- Add type safety usage guide and contributing details to README.md
+  ([`2487b74`](https://github.com/AresSC2/cython-extensions-sc2/commit/2487b74453966e71e6a52edd6d16d7e584348622))
+
+### Features
+
+- New type checking system using python wrappers
+  ([`ea12c8b`](https://github.com/AresSC2/cython-extensions-sc2/commit/ea12c8b128c5c0af1a9d88b04b7d134d905ce012))
+
+
+## v0.7.1 (2025-09-04)
+
+### Bug Fixes
+
+- Drop python 3.10 support for macos wheels
+  ([`a254dd6`](https://github.com/AresSC2/cython-extensions-sc2/commit/a254dd6c3aeaa9fe9c566110f4a1d6048e7088f9))
+
+
+## v0.7.0 (2025-09-04)
+
+### Bug Fixes
+
+- Update references to cy_in_pathing_grid with cy_in_pathing_grid_burny
+  ([`df7d2f4`](https://github.com/AresSC2/cython-extensions-sc2/commit/df7d2f4f6c3b3c25fd5ce00f934cbb240baf91aa))
+
+### Build System
+
+- Drop python 3.10 support
+  ([`0e6f6dc`](https://github.com/AresSC2/cython-extensions-sc2/commit/0e6f6dc5c989e9f864dba0ae8d055ae206e74260))
+
+### Documentation
+
+- Update README.md
+  ([`604253a`](https://github.com/AresSC2/cython-extensions-sc2/commit/604253a0f2a7aca10af73e98023b89c4c01d23a2))
+
+### Features
+
+- Add has creep and in pathing grid functions
+  ([`039af98`](https://github.com/AresSC2/cython-extensions-sc2/commit/039af983956f98bc95bdfabe7421e714739fc415))
+
+- Support float position types in cy_point_below_value function
+  ([`bd82346`](https://github.com/AresSC2/cython-extensions-sc2/commit/bd82346e9ccc49d0c9889fcf1227935b56c957e8))
+
+By performing rounding inside the cython function, we get a bit more performance for real world
+  scenarios
+
+- Updated notebooks
+  ([`f87a4d4`](https://github.com/AresSC2/cython-extensions-sc2/commit/f87a4d43a08acf78856d5db005ac829aa3599568))
+
+
+## v0.6.8 (2025-05-26)
+
+### Bug Fixes
+
+- Optimization func works with writable and read only np arrays
+  ([`68b36c7`](https://github.com/AresSC2/cython-extensions-sc2/commit/68b36c7b95f2b59253301dd62f5113cd4f7b090e))
+
+
+## v0.6.7 (2025-05-13)
+
+### Bug Fixes
+
+- Update default value for turn_rate in get_turn_rate function
+  ([`1c91282`](https://github.com/AresSC2/cython-extensions-sc2/commit/1c9128298995779ee8445696a1a7510b50316b44))
+
+Prevents function returning `None`
+
+
+## v0.6.6 (2025-05-08)
+
+### Bug Fixes
+
+- **unit_data**: Add 'flying' attribute to ChangelingZealot unit
+  ([`666ead9`](https://github.com/AresSC2/cython-extensions-sc2/commit/666ead93eb8d0bf721ef3c14272c6d462ca06adf))
+
+
+## v0.6.5 (2025-05-07)
+
+### Bug Fixes
+
+- **units_utils**: Fix incorrect variable reference in units loop
+  ([`09686df`](https://github.com/AresSC2/cython-extensions-sc2/commit/09686dfc712a21d86db5b0e750ca9df3c8793ffd))
+
+
+## v0.6.4 (2025-04-27)
+
+### Bug Fixes
+
+- Correct dtype for bounds in find_aoe
+  ([#26](https://github.com/AresSC2/cython-extensions-sc2/pull/26),
+  [`1038e76`](https://github.com/AresSC2/cython-extensions-sc2/commit/1038e76143d551fd6a15767e2111c34bc96da2c1))
+
+
+## v0.6.3 (2025-04-25)
+
+### Bug Fixes
+
+- Wheels build on mac
+  ([`7a11cf3`](https://github.com/AresSC2/cython-extensions-sc2/commit/7a11cf3f3e1d9b7c64c16f7c4c42018138daa2c7))
+
+
+## v0.6.2 (2025-04-25)
+
+### Bug Fixes
+
+- Correct version number for cibuildwheel
+  ([`6395630`](https://github.com/AresSC2/cython-extensions-sc2/commit/63956305a33e5f3978760f64f0095b7c6cfa959d))
+
+
+## v0.6.1 (2025-04-25)
+
+### Bug Fixes
+
+- Wheels build on python 3.13
+  ([`17fa3fe`](https://github.com/AresSC2/cython-extensions-sc2/commit/17fa3fe299f91ce432494b4fc6ce520180778e86))
+
+
+## v0.6.0 (2025-04-06)
+
+### Features
+
+- Add dijkstra pathing ([#21](https://github.com/AresSC2/cython-extensions-sc2/pull/21),
+  [`39a8318`](https://github.com/AresSC2/cython-extensions-sc2/commit/39a83184f35eb97e06813881896d181734b44166))
+
+* feat: add dijkstra pathing
+
+* fix: use python ints as points
+
+* test: add dijkstra testing
+
+* doc: add docstrings to cy_dijkstra
+
+* test: slightly adapt test cases
+
+* fix: optimize bounds checks
+
+* test: use approximate checks
+
+* fix: remove unnecessary import
+
+* fix: Add dijkstra.pyi
+
+* fix: add dijkstra output members to pyi
+
+* fix: refactoring
+
+* test: simplify dijkstra fail case tests
+
+* fix: use int datatype
+
+* doc: add dijkstra
+
+* fix: typo in error message
+
+* fix: set c++11 compiler flag
+
+* feat: add priority queue
+
+* fix: optimize and unroll
+
+---------
+
+Authored-by: Volker Schmidt <volker.schmidt91@gmail.com>
+
+* ci: revert change to file deletion
+
+* fix: revert changes to build.py
+
+* fix: pyproject.toml
+
+* 0.1.0
+
+Automatically generated by python-semantic-release
+
+* Revert "0.1.0"
+
+This reverts commit 1b60b47a3af721dbcaae5a717270829f0acac6e6.
+
+* docs: improve dijkstra.pyi
+
+Co-authored-by: Volker Schmidt <volker.schmidt91@gmail.com>
+
+
 ## v0.5.0 (2025-01-03)
 
 ### Build System

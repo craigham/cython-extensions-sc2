@@ -5,6 +5,7 @@ And that some cython functions are working
 """
 
 from random import choice
+import statistics
 
 from sc2 import maps
 from sc2.bot_ai import BotAI
@@ -15,21 +16,29 @@ from sc2.main import run_game
 from sc2.player import Bot, Computer
 from sc2.position import Point2
 
+import timeit
+
 from cython_extensions import (
     cy_angle_diff,
     cy_closest_to,
     cy_find_units_center_mass,
+    cy_has_creep,
+    cy_in_pathing_grid_burny,
     cy_is_facing,
+    enable_safe_mode,
+    cy_closer_than,
+    cy_further_than
 )
 from cython_extensions.combat_utils import (
     cy_adjust_moving_formation,
     cy_find_aoe_position,
 )
-
+enable_safe_mode(False)
 
 class BotTest(BotAI):
     def __init__(self):
         super().__init__()
+        # enable_safe_mode(False)
         self.unit_fodder_values: dict[UnitTypeId, int] = {
             UnitTypeId.STALKER: 4,
             UnitTypeId.ZEALOT: 1,
@@ -39,6 +48,9 @@ class BotTest(BotAI):
 
     async def on_start(self):
         self.client.game_step = 2
+        # await self.client.debug_create_unit(
+        #     [[UnitTypeId.MARINE, 2, self.start_location, 2]]
+        # )
         # uncomment to test AOE
         # await self.client.debug_create_unit([[UnitTypeId.RAVAGER, 5, self.start_location, 1]])
         # await self.client.debug_create_unit([[UnitTypeId.MARINE, 20, self.main_base_ramp.top_center, 2]])
@@ -65,9 +77,7 @@ class BotTest(BotAI):
             return 0
 
     async def on_step(self, iteration: int):
-
-        pass
-
+        # pos = cy_find_aoe_position(3.0, [])
         # TEST AOE
         # for unit in self.units:
         #     if unit.type_id == UnitTypeId.RAVAGER:
@@ -88,7 +98,42 @@ class BotTest(BotAI):
         # print(cy_is_facing(self.workers[0], self.workers[1]))
         # print(cy_angle_diff(300.0, 250.0))
         # print(cy_closest_to(self.start_location, self.workers))
+        # pos = self.start_location.towards(self.game_info.map_center, 7.0)
+        # print(cy_has_creep(self.state.creep.data_numpy, pos))
+        # print(self.has_creep(pos))
+        # print(cy_has_creep(self.state.creep.data_numpy, self.game_info.map_center))
+        # print(self.has_creep(self.game_info.map_center))
+        # print("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!")
+        # print(cy_in_pathing_grid_burny(self.game_info.pathing_grid.data_numpy.T, pos))
+        # print(self.in_pathing_grid(pos))
+        # print(
+        #     cy_in_pathing_grid_burny(
+        #         self.game_info.pathing_grid.data_numpy.T, self.start_location
+        #     )
+        # )
+        # print(self.in_pathing_grid(self.start_location))
+        units=self.all_own_units
+        #units= [s for s in units]
+        base = self.townhalls[0]
+        
+        units_A = [u for u in units]
+        position= (base.position.x, base.position.y)
+        #position = (base.position.x, base.position.y)
+        a=(len(cy_closer_than(units, 10.0, base.position)))
+        b=(len(cy_further_than(units_A, 10.0, position)))
+        
+        #summe
+        print(f"Closer than 10: {a}, Further than 10: {b}, Total: {a+b}")
 
+        
+        # time_taken = timeit.timeit(
+        #     stmt=lambda: cy_closer_than(self.units, self.townhalls[0].position, 10.0),
+        #     number=10000,
+        # )
+        #print(f"Time taken for cy_closer_than: {time_taken} seconds")
+        
+        # print(len(cy_closer_than(self.units, 1, 15.0)))
+        print("---------------------------")
         # TEST UNIT FORMATION (play on micro arena)
         # if not self.enemy_units:
         #     return
@@ -126,15 +171,17 @@ class BotTest(BotAI):
 if __name__ == "__main__":
     random_map = choice(
         [
-            "GoldenAura513AIE",
-            # "Tier1MicroAIArena_v4"
+            #"InterloperAIE",
+            # "Tier1MicroAIArena_v4",
+            "TorchesAIE"
+            
         ]
     )
     run_game(
         maps.get(random_map),
         [
-            Bot(Race.Protoss, BotTest()),
+            Bot(Race.Zerg, BotTest()),
             Computer(Race.Protoss, Difficulty.Medium),
         ],
-        realtime=False,
+        realtime=True,
     )
