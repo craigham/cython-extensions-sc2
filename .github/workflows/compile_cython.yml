@@ -35,7 +35,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: ladder_binary
-          path: cython_extensions/bootstrap.cpython-312-x86_64-linux-gnu.so
+          path: cython_extensions/bootstrap.cpython-311-x86_64-linux-gnu.so
   build:
     name: Compile Cython
     needs: build_ladder_binary
